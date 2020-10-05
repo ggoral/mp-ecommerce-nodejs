@@ -2,7 +2,7 @@ const mercadopago = require('mercadopago');
 
 mercadopago.configure({
     access_token: process.env.PROD_ACCESS_TOKEN,
-    //integrator_id: process.env.INTEGRATOR_ID,
+    integrator_id: process.env.INTEGRATOR_ID,
 });
 
 const detail = (req, res) => {
@@ -18,7 +18,7 @@ const detail = (req, res) => {
     items: [
       {
         id: 1234,
-        title,
+        title: title,
         description: "Dispositivo móvil de Tienda e-commerce",
         quantity: parseFloat(unit),
         unit_price: parseFloat(price),
