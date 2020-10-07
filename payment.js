@@ -9,8 +9,7 @@ function call({title, price, quantity, image}) {
     const url = process.env.URL;
     const external_reference = process.env.EXTERNAL_REFERENCE;
     let picture_url = (new URL(image, [process.env.URL])).href;
-    console.log(`title: ${title}, type: ${typeof(title)}`);
-    console.log(`quantity: ${quantity}, type: ${typeof(quantity)}`);
+
     const preference = {
       collector_id: 469485398,
       items: [
