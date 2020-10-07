@@ -20,10 +20,7 @@ app.get('/detail', function (req, res) {
 });
 
 app.post('/checkout', function (req, res) {
-    console.log('Payment Initialized');
-    console.log('req-query: ', req.query);
-    console.log('req-body: ', req.body);
-
+    console.log('Checkout Initialized');
     let { title, price, quantity, image } = req.body
     payment.call(req.body)
     .then((response) => {
