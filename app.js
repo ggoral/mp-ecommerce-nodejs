@@ -21,7 +21,7 @@ app.get('/detail', function (req, res) {
 
 app.post('/checkout', function (req, res) {
     console.log('Checkout Initialized');
-    let { title, price, quantity, image } = req.body
+
     payment.call(req.body)
     .then((response) => {
         res.redirect(response.body.init_point);
@@ -43,8 +43,8 @@ app.get('/failure', function (req, res) {
 
 app.post('/notifications', function (req, res) {
     console.log('Instant Payment Notification');
-    console.log('QUERY: ', req.query);
-    console.log('BODY: ', req.body);
+    console.log('req-query: ', req.query);
+    console.log('req-body: ', req.body);
     res.status(200).send("OK");
 });
 
