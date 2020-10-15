@@ -11,7 +11,7 @@ function call({title, price, quantity, image}) {
     let picture_url = (new URL(image, [process.env.URL])).href;
 
     const preference = {
-      collector_id: 469485398,
+      //collector_id: 469485398,
       items: [
         {
           id: '1234',
