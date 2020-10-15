@@ -24,6 +24,7 @@ app.post('/checkout', function (req, res) {
 
     payment.call(req.body)
     .then((response) => {
+        console.log(response);
         res.redirect(response.body.init_point);
     }).catch((err) => {
         console.error(err);
