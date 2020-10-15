@@ -48,7 +48,7 @@ function call({title, price, quantity, image}) {
         installments: 6,
       },
       external_reference,
-      notification_url: `${url}/notifications?source_news=webhooks`,
+      notification_url: `${url}/notifications`,
       };
 
     return mercadopago.preferences.create(preference);

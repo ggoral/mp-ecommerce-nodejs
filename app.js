@@ -46,7 +46,7 @@ app.post('/notifications', function (req, res) {
     console.log('Instant Payment Notification');
     console.log('req-query: ', req.query);
     console.log('req-body: ', req.body);
-    res.status(200).send("OK");
+    res.status(200).send();
 });
 
 app.use(express.static('assets'));
