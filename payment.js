@@ -11,7 +11,6 @@ function call({title, price, quantity, image}) {
     let picture_url = (new URL(image, [process.env.URL])).href;
 
     const preference = {
-      //collector_id: 469485398,
       items: [
         {
           id: '1234',
@@ -48,7 +47,7 @@ function call({title, price, quantity, image}) {
         installments: 6,
       },
       external_reference,
-      notification_url: `${url}/notifications`,
+      notification_url: `${url}/notifications?source_news=webhooks`,
       };
 
     return mercadopago.preferences.create(preference);
